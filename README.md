@@ -8,7 +8,7 @@ The use of this project is very easy, just execute the following command ([Vagra
 
 ```sh
 # clone this repository
-https://github.com/gsdenys/lua-vagrant.git
+git clone https://github.com/gsdenys/lua-vagrant.git
 cd lua-vagrant
 
 # Starts and access VM
