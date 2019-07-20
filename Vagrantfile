@@ -20,9 +20,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/bionic64"
   config.vm.synced_folder source, "/lua"
 
-  for i in 8080..9999
-    config.vm.network :forwarded_port, guest: i, host: i
-  end
+  ####################################################################
+  # add the network fowarded port here                               #
+  # ex: config.vm.network "forwarded_port", guest: 15672, host: 8080 #
+  ####################################################################
+  
+  # config.vm.network "forwarded_port", guest: 8080, host: 8080
+  
 
   config.vm.provision "shell", path: "provision.sh"
 end
